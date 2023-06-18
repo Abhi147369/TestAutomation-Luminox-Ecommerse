@@ -70,7 +70,7 @@ If you would like to contribute to this project, please follow these steps:
 
 ## License
 
-This project is Preapared by Abhishek Gavkare.
+This project is Prepared by Abhishek Gavkare.
 
 ## Acknowledgments
 
