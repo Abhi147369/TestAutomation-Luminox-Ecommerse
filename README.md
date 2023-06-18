@@ -17,7 +17,7 @@ Make sure you have the following software installed on your machine:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/TestAutomation-Luminox-Ecommerce.git
+git clone https://github.com/Abhi147369/TestAutomation-Luminox-Ecommerse.git
 ```
 
 2. Navigate to the project directory:
@@ -29,7 +29,8 @@ cd TestAutomation-Luminox-Ecommerce
 3. Update the WebDriver configuration:
 
    - Download the Chrome WebDriver compatible with your Chrome browser version.
-   - Set the path to the WebDriver executable in the `src/test/resources/config.properties` file.
+   - Create TestNG file according to your configuration.
+   - Run that TestNG suite.
 
 4. Build the project:
 
