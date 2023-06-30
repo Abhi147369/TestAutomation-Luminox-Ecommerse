@@ -1,74 +1,77 @@
 package pages;
 
-import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.Random;
+
 public class LuminoxRegisterPage {
-	static WebElement element;
 	private WebDriver driver;
+
+	private By registerLink = By.linkText("Register");
+	private By genderRadioButton = By.id("gender-male");
+	private By firstNameInput = By.id("FirstName");
+	private By lastNameInput = By.id("LastName");
+	private By dateOfBirthDaySelect = By.name("DateOfBirthDay");
+	private By dateOfBirthMonthSelect = By.name("DateOfBirthMonth");
+	private By dateOfBirthYearSelect = By.name("DateOfBirthYear");
+	private By emailInput = By.id("Email");
+	private By passwordInput = By.id("Password");
+	private By confirmPasswordInput = By.id("ConfirmPassword");
+	private By registerButton = By.id("register-button");
+	private By successMessage = By.xpath("//div[@class='result']");
+	private By nameRquiredErrorMsg = By.xpath("//span[@id='FirstName-error']");
+	private By LastnameRquiredErrorMsg = By.xpath("//span[@id='LastName-error']");
+	private By invalidEmailErrorMsg = By.xpath("//span[@id='Email-error']");
+	private By mismatchedPasswordsErrorMsg = By.xpath("//span[@id='ConfirmPassword-error']");
 
 	public LuminoxRegisterPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	// Locators
-	By register_link_linktext = By.linkText("Register");
-	By gender_radio_button_id = By.id("gender-male");
-	By first_name_id = By.id("FirstName");
-	By last_name_id = By.id("LastName");
-	By date_of_birthday_name = By.name("DateOfBirthDay");
-	By date_of_birthmonth_name = By.name("DateOfBirthMonth");
-	By date_of_birthyear_name = By.name("DateOfBirthYear");
-	By email_id = By.id("Email");
-	By password_id = By.id("Password");
-	By confirm_password_id = By.id("ConfirmPassword");
-	By register_button_id = By.id("register-button");
-	By successMessage = By.xpath("//div[@class='result']");
-
-	// Methods
-	public void clickOnRegisterLink() {
-		driver.findElement(register_link_linktext).click();
+	public void clickRegisterLink() {
+		driver.findElement(registerLink).click();
 	}
 
-	public void registerGender() {
-		driver.findElement(gender_radio_button_id).click();
+	public void selectGender() {
+		driver.findElement(genderRadioButton).click();
 	}
 
-	public void enterFirstName(String name) {
-		driver.findElement(first_name_id).clear();
-		driver.findElement(first_name_id).sendKeys(name);
+	public void enterFirstName(String firstName) {
+		WebElement firstNameElement = driver.findElement(firstNameInput);
+		firstNameElement.clear();
+		firstNameElement.sendKeys(firstName);
 	}
 
 	public void enterLastName(String lastName) {
-		driver.findElement(last_name_id).clear();
-		driver.findElement(last_name_id).sendKeys(lastName);
+		WebElement lastNameElement = driver.findElement(lastNameInput);
+		lastNameElement.clear();
+		lastNameElement.sendKeys(lastName);
 	}
 
-	public void enterBirthday(int day) {
-		WebElement birthday = driver.findElement(date_of_birthday_name);
-		Select select = new Select(birthday);
-		select.selectByIndex(day);
+	public void enterDateOfBirth(int day, int month, String year) {
+		selectOptionByIndex(dateOfBirthDaySelect, day);
+		selectOptionByIndex(dateOfBirthMonthSelect, month);
+		selectOptionByVisibleText(dateOfBirthYearSelect, year);
 	}
 
-	public void enterBirthMonth(int month) {
-		WebElement birthday = driver.findElement(date_of_birthmonth_name);
-		Select select = new Select(birthday);
-		select.selectByIndex(month);
+	private void selectOptionByIndex(By locator, int index) {
+		WebElement element = driver.findElement(locator);
+		Select select = new Select(element);
+		select.selectByIndex(index);
 	}
 
-	public void enterBirthYear(String year) {
-		WebElement birthday = driver.findElement(date_of_birthyear_name);
-		Select select = new Select(birthday);
-		select.selectByVisibleText(year);
+	private void selectOptionByVisibleText(By locator, String visibleText) {
+		WebElement element = driver.findElement(locator);
+		Select select = new Select(element);
+		select.selectByVisibleText(visibleText);
 	}
 
 	public String generateRandomEmail() {
 		String allowedChars = "abcdefghijklmnopqrstuvwxyz1234567890";
-		StringBuilder email = new StringBuilder();
+		StringBuilder email = new StringBuilder(20);
 		Random random = new Random();
 
 		for (int i = 0; i < 10; i++) {
@@ -82,28 +85,46 @@ public class LuminoxRegisterPage {
 	}
 
 	public void enterEmail(String email) {
-		driver.findElement(email_id).clear();
-		driver.findElement(email_id).sendKeys(email);
+		WebElement emailElement = driver.findElement(emailInput);
+		emailElement.clear();
+		emailElement.sendKeys(email);
 	}
 
 	public void enterPassword(String password) {
-		driver.findElement(password_id).clear();
-		driver.findElement(password_id).sendKeys(password);
+		WebElement passwordElement = driver.findElement(passwordInput);
+		passwordElement.clear();
+		passwordElement.sendKeys(password);
 	}
 
 	public void confirmPassword(String confirmPassword) {
-		driver.findElement(confirm_password_id).clear();
-		driver.findElement(confirm_password_id).sendKeys(confirmPassword);
+		WebElement confirmPasswordElement = driver.findElement(confirmPasswordInput);
+		confirmPasswordElement.clear();
+		confirmPasswordElement.sendKeys(confirmPassword);
 	}
 
 	public void clickRegisterButton() {
-		driver.findElement(register_button_id).click();
+		driver.findElement(registerButton).click();
 	}
 
 	public boolean isRegistrationSuccessful() {
 		WebElement successMessageElement = driver.findElement(successMessage);
 		return successMessageElement.isDisplayed();
+	}
 
+	public String getNameRequiredErrorMessage() {
+		return driver.findElement(nameRquiredErrorMsg).getText();
+	}
+
+	public String getLastNameRequiredErrorMessage() {
+		return driver.findElement(LastnameRquiredErrorMsg).getText();
+	}
+
+	public String getInvalidEmailErrorMessage() {
+		return driver.findElement(invalidEmailErrorMsg).getText();
+	}
+
+	public String getMismatchedPasswordsErrorMessage() {
+		return driver.findElement(mismatchedPasswordsErrorMsg).getText();
 	}
 
 }

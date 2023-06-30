@@ -5,9 +5,11 @@
     <classes>
       <class name="tests.Test_HomePage">
         <methods>
+          <include name="verifyHomePageHeaderLinks"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="testHomePageHeaderLink"/>
+          <include name="verifySearchFunctionality"/>
+          <include name="verifyLogo"/>
         </methods>
       </class> <!-- tests.Test_HomePage -->
     </classes>

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class LoginPage {
-	public WebDriver driver;
+	private WebDriver driver;
 	static WebElement element;
 
 	public LoginPage(WebDriver driver) {
@@ -15,11 +15,11 @@ public class LoginPage {
 
 	// Locators
 
-	By login_xpath = By.xpath("//a[@class='ico-login']");
-	By input_email_id = By.id("Email");
-	By input_password_id = By.id("Password");
-	By button_login_xpath = By.xpath("//input[@class ='button-1 login-button']");
-	By errorMsg_xpath = By.xpath("//div[@class='message-error validation-summary-errors']");
+	private By login_xpath = By.xpath("//a[@class='ico-login']");
+	private By input_email_id = By.id("Email");
+	private By input_password_id = By.id("Password");
+	private By button_login_xpath = By.xpath("//input[@class ='button-1 login-button']");
+	private By errorMsg_xpath = By.xpath("//div[@class='message-error validation-summary-errors']");
 	
 
 	// Methods

@@ -4,13 +4,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.Test_HomePage">
+      <class name="tests.Test_LuminoxRegisterPage">
         <methods>
           <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="testHomePageHeaderLink"/>
+          <include name="missingFirstNameTest"/>
         </methods>
-      </class> <!-- tests.Test_HomePage -->
+      </class> <!-- tests.Test_LuminoxRegisterPage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-17T16:51:03 IST" name="Suite" finished-at="2023-06-17T16:51:12 IST" duration-ms="9008">
+  <suite started-at="2023-06-30T16:27:43 IST" name="Suite" finished-at="2023-06-30T16:27:59 IST" duration-ms="16606">
     <groups>
     </groups>
-    <test started-at="2023-06-17T16:51:03 IST" name="Test" finished-at="2023-06-17T16:51:12 IST" duration-ms="9008">
+    <test started-at="2023-06-30T16:27:43 IST" name="Test" finished-at="2023-06-30T16:27:59 IST" duration-ms="16606">
       <class name="tests.Test_LuminoxRegisterPage">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:tests.Test_LuminoxRegisterPage@765d7657]" started-at="2023-06-17T16:51:03 IST" name="beforeTest" finished-at="2023-06-17T16:51:10 IST" duration-ms="6941" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:tests.Test_LuminoxRegisterPage@13c9d689]" started-at="2023-06-30T16:27:43 IST" name="beforeTest" finished-at="2023-06-30T16:27:50 IST" duration-ms="7468" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="validTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@765d7657]" started-at="2023-06-17T16:51:10 IST" name="validTest" finished-at="2023-06-17T16:51:12 IST" duration-ms="1837" status="PASS">
+        <test-method signature="invalidEmailTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@13c9d689]" started-at="2023-06-30T16:27:50 IST" name="invalidEmailTest" finished-at="2023-06-30T16:27:52 IST" duration-ms="1633" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidEmailTest -->
+        <test-method signature="mismatchedPasswordsTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@13c9d689]" started-at="2023-06-30T16:27:52 IST" name="mismatchedPasswordsTest" finished-at="2023-06-30T16:27:54 IST" duration-ms="1901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mismatchedPasswordsTest -->
+        <test-method signature="missingFirstNameTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@13c9d689]" started-at="2023-06-30T16:27:54 IST" name="missingFirstNameTest" finished-at="2023-06-30T16:27:56 IST" duration-ms="1725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingFirstNameTest -->
+        <test-method signature="missingLastNameTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@13c9d689]" started-at="2023-06-30T16:27:56 IST" name="missingLastNameTest" finished-at="2023-06-30T16:27:57 IST" duration-ms="1217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingLastNameTest -->
+        <test-method signature="validTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@13c9d689]" started-at="2023-06-30T16:27:57 IST" name="validTest" finished-at="2023-06-30T16:27:59 IST" duration-ms="2306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validTest -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@765d7657]" started-at="2023-06-17T16:51:12 IST" name="afterTest" finished-at="2023-06-17T16:51:12 IST" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.Test_LuminoxRegisterPage@13c9d689]" started-at="2023-06-30T16:27:59 IST" name="afterTest" finished-at="2023-06-30T16:27:59 IST" duration-ms="280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
