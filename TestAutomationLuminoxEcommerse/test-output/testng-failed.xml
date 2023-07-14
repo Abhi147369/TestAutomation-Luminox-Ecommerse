@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tests.Test_LuminoxRegisterPage">
+      <class name="tests.Test_MobilePage">
         <methods>
           <include name="afterTest"/>
+          <include name="testClickIOSOption"/>
+          <include name="testClickAndroidOption"/>
           <include name="beforeTest"/>
-          <include name="missingFirstNameTest"/>
+          <include name="setUpLoginPage"/>
         </methods>
-      </class> <!-- tests.Test_LuminoxRegisterPage -->
+      </class> <!-- tests.Test_MobilePage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -28,11 +29,14 @@ public class Test_LoginPage extends Basetest {
 	}
 
 	@Test
-	public void invalidData() {
+	public void invalidEmailPassword() {
 		loginPage.enterEmail(invalidEmail);
 		loginPage.enterPassword(invalidPassword);
 		loginPage.clickLoginButton();
-		loginPage.getErrorMsgBothOrEmailWrong();
+		String LoginErrorText = loginPage.getErrorMsgBothOrEmailWrong();
+		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
+				+ "No customer account found";
+		Assert.assertEquals(LoginErrorText, ExpectedLoginErrorText);
 	}
 
 	@Test
@@ -40,7 +44,10 @@ public class Test_LoginPage extends Basetest {
 		loginPage.enterEmail(invalidEmail);
 		loginPage.enterPassword(validPassword);
 		loginPage.clickLoginButton();
-		loginPage.getErrorMsgBothOrEmailWrong();
+		String LoginErrorText = loginPage.getErrorMsgBothOrEmailWrong();
+		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
+				+ "No customer account found";
+		Assert.assertEquals(LoginErrorText, ExpectedLoginErrorText);
 	}
 
 	@Test
@@ -48,6 +55,34 @@ public class Test_LoginPage extends Basetest {
 		loginPage.enterEmail(validEmail);
 		loginPage.enterPassword(invalidPassword);
 		loginPage.clickLoginButton();
-		loginPage.getErrorMsg();
+		String LoginErrorText = loginPage.getErrorMsg();
+		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
+				+ "The credentials provided are incorrect";
+		Assert.assertEquals(LoginErrorText, ExpectedLoginErrorText);
+	}
+
+	@Test
+	public void testEmptyUsername() {
+		loginPage.enterEmail("");
+		loginPage.enterPassword(validPassword);
+		loginPage.clickLoginButton();
+		String errorMsg = loginPage.getErrorMsg();
+		Assert.assertEquals(errorMsg, "Please enter your email");
+	}
+
+	@Test
+	public void testEmptyPassword() {
+		loginPage.enterEmail(invalidEmail);
+		loginPage.enterPassword("");
+		loginPage.clickLoginButton();
+		String errorMsg = loginPage.getErrorMsg();
+		Assert.assertEquals(errorMsg, "Please enter your password");
+	}
+
+	@Test
+	public void testForgotPasswordLink() {
+		loginPage.clickForgotPasswordLink();
+		String resetPageTitle = driver.getTitle();
+		Assert.assertEquals(resetPageTitle, "Luminoex Online Shopping Application | luminoex.com. Password Recovery");
 	}
 }

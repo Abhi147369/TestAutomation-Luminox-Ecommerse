@@ -20,7 +20,7 @@ public class LoginPage {
 	private By input_password_id = By.id("Password");
 	private By button_login_xpath = By.xpath("//input[@class ='button-1 login-button']");
 	private By errorMsg_xpath = By.xpath("//div[@class='message-error validation-summary-errors']");
-	
+	private By click_forgot_pass_xpath = By.xpath("//a[normalize-space()='Forgot password?']");
 
 	// Methods
 	public void clickLoginLink() {
@@ -40,22 +40,20 @@ public class LoginPage {
 	public void clickLoginButton() {
 		driver.findElement(button_login_xpath).click();
 	}
-	
-	public void getErrorMsg() {
+
+	public String getErrorMsg() {
 		String LoginErrorText = driver.findElement(errorMsg_xpath).getText();
-		System.out.println(LoginErrorText);
-		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
-				+ "The credentials provided are incorrect";
-		Assert.assertEquals(LoginErrorText,ExpectedLoginErrorText);
+		return LoginErrorText;
 	}
-	
-	public void getErrorMsgBothOrEmailWrong() {
+
+	public String getErrorMsgBothOrEmailWrong() {
 		String LoginErrorText = driver.findElement(errorMsg_xpath).getText();
-		System.out.println(LoginErrorText);
-		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
-				+ "No customer account found";
-		Assert.assertEquals(LoginErrorText,ExpectedLoginErrorText);
-		
+		return LoginErrorText;
+	}
+
+	public void clickForgotPasswordLink() {
+		driver.findElement(click_forgot_pass_xpath).click();
+
 	}
 
 }
