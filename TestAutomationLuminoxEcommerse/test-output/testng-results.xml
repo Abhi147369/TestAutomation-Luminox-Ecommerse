@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="0" skipped="2">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-14T14:18:15 IST" name="Suite" finished-at="2023-07-14T14:18:29 IST" duration-ms="14414">
+  <suite started-at="2023-07-14T15:43:18 IST" name="Suite" finished-at="2023-07-14T15:43:26 IST" duration-ms="8271">
     <groups>
     </groups>
-    <test started-at="2023-07-14T14:18:15 IST" name="Test" finished-at="2023-07-14T14:18:29 IST" duration-ms="14414">
-      <class name="tests.Test_MobilePage">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:15 IST" name="beforeTest" finished-at="2023-07-14T14:18:18 IST" duration-ms="3099" status="PASS">
+    <test started-at="2023-07-14T15:43:18 IST" name="Test" finished-at="2023-07-14T15:43:26 IST" duration-ms="8271">
+      <class name="tests.Test_LoginPage">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:18 IST" name="beforeTest" finished-at="2023-07-14T15:43:22 IST" duration-ms="3723" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,209 +18,67 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:18 IST" name="setUpLoginPage" finished-at="2023-07-14T14:18:19 IST" duration-ms="792" status="PASS">
+        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:22 IST" name="setUpLoginPage" finished-at="2023-07-14T15:43:22 IST" duration-ms="384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpLoginPage -->
-        <test-method signature="testClickMobileLink()[pri:1, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:19 IST" name="testClickMobileLink" finished-at="2023-07-14T14:18:19 IST" duration-ms="398" status="PASS">
+        <test-method signature="invalidEmail()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:22 IST" name="invalidEmail" finished-at="2023-07-14T15:43:22 IST" duration-ms="511" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testClickMobileLink -->
-        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:19 IST" name="setUpLoginPage" finished-at="2023-07-14T14:18:29 IST" duration-ms="10057" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='ico-login']"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [245c594df45f3e2b54ba74744b6553ec, findElement {using=xpath, value=//a[@class='ico-login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: C:\Users\gavka\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57506}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57506/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 245c594df45f3e2b54ba74744b6553ec]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='ico-login']"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [245c594df45f3e2b54ba74744b6553ec, findElement {using=xpath, value=//a[@class='ico-login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: C:\Users\gavka\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57506}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57506/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 245c594df45f3e2b54ba74744b6553ec
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pages.LoginPage.clickLoginLink(LoginPage.java:27)
-at tests.Test_MobilePage.setUpLoginPage(Test_MobilePage.java:18)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1589)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- invalidEmail -->
+        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:22 IST" name="setUpLoginPage" finished-at="2023-07-14T15:43:23 IST" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpLoginPage -->
-        <test-method signature="testClickAndroidOption()[pri:2, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:29 IST" name="testClickAndroidOption" finished-at="2023-07-14T14:18:29 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='ico-login']"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [245c594df45f3e2b54ba74744b6553ec, findElement {using=xpath, value=//a[@class='ico-login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: C:\Users\gavka\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57506}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57506/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 245c594df45f3e2b54ba74744b6553ec]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='ico-login']"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [245c594df45f3e2b54ba74744b6553ec, findElement {using=xpath, value=//a[@class='ico-login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: C:\Users\gavka\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57506}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57506/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 245c594df45f3e2b54ba74744b6553ec
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pages.LoginPage.clickLoginLink(LoginPage.java:27)
-at tests.Test_MobilePage.setUpLoginPage(Test_MobilePage.java:18)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1589)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="invalidEmailPassword()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:23 IST" name="invalidEmailPassword" finished-at="2023-07-14T15:43:23 IST" duration-ms="407" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testClickAndroidOption -->
-        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:29 IST" name="setUpLoginPage" finished-at="2023-07-14T14:18:29 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- invalidEmailPassword -->
+        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:23 IST" name="setUpLoginPage" finished-at="2023-07-14T15:43:23 IST" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpLoginPage -->
-        <test-method signature="testClickIOSOption()[pri:3, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:29 IST" name="testClickIOSOption" finished-at="2023-07-14T14:18:29 IST" duration-ms="1" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='ico-login']"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [245c594df45f3e2b54ba74744b6553ec, findElement {using=xpath, value=//a[@class='ico-login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: C:\Users\gavka\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57506}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57506/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 245c594df45f3e2b54ba74744b6553ec]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='ico-login']"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [245c594df45f3e2b54ba74744b6553ec, findElement {using=xpath, value=//a[@class='ico-login']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: C:\Users\gavka\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57506}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57506/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 245c594df45f3e2b54ba74744b6553ec
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at pages.LoginPage.clickLoginLink(LoginPage.java:27)
-at tests.Test_MobilePage.setUpLoginPage(Test_MobilePage.java:18)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:816)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1589)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="invalidPassword()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:23 IST" name="invalidPassword" finished-at="2023-07-14T15:43:24 IST" duration-ms="415" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testClickIOSOption -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.Test_MobilePage@62379589]" started-at="2023-07-14T14:18:29 IST" name="afterTest" finished-at="2023-07-14T14:18:29 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- invalidPassword -->
+        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:24 IST" name="setUpLoginPage" finished-at="2023-07-14T15:43:24 IST" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginPage -->
+        <test-method signature="testEmptyPassword()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:24 IST" name="testEmptyPassword" finished-at="2023-07-14T15:43:24 IST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyPassword -->
+        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:24 IST" name="setUpLoginPage" finished-at="2023-07-14T15:43:24 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginPage -->
+        <test-method signature="testEmptyUsername()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:24 IST" name="testEmptyUsername" finished-at="2023-07-14T15:43:25 IST" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyUsername -->
+        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:25 IST" name="setUpLoginPage" finished-at="2023-07-14T15:43:25 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginPage -->
+        <test-method signature="testForgotPasswordLink()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:25 IST" name="testForgotPasswordLink" finished-at="2023-07-14T15:43:25 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPasswordLink -->
+        <test-method is-config="true" signature="setUpLoginPage()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:25 IST" name="setUpLoginPage" finished-at="2023-07-14T15:43:25 IST" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginPage -->
+        <test-method signature="validDataTest()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:25 IST" name="validDataTest" finished-at="2023-07-14T15:43:26 IST" duration-ms="657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validDataTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.Test_LoginPage@10683d9d]" started-at="2023-07-14T15:43:26 IST" name="afterTest" finished-at="2023-07-14T15:43:26 IST" duration-ms="177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- tests.Test_MobilePage -->
+      </class> <!-- tests.Test_LoginPage -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

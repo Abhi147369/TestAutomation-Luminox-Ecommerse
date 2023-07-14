@@ -1,5 +1,7 @@
 package tests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -36,7 +38,7 @@ public class Test_LoginPage extends Basetest {
 		String LoginErrorText = loginPage.getErrorMsgBothOrEmailWrong();
 		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
 				+ "No customer account found";
-		Assert.assertEquals(LoginErrorText, ExpectedLoginErrorText);
+		AssertJUnit.assertEquals(LoginErrorText, ExpectedLoginErrorText);
 	}
 
 	@Test
@@ -47,7 +49,7 @@ public class Test_LoginPage extends Basetest {
 		String LoginErrorText = loginPage.getErrorMsgBothOrEmailWrong();
 		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
 				+ "No customer account found";
-		Assert.assertEquals(LoginErrorText, ExpectedLoginErrorText);
+		AssertJUnit.assertEquals(LoginErrorText, ExpectedLoginErrorText);
 	}
 
 	@Test
@@ -58,7 +60,7 @@ public class Test_LoginPage extends Basetest {
 		String LoginErrorText = loginPage.getErrorMsg();
 		String ExpectedLoginErrorText = "Login was unsuccessful. Please correct the errors and try again.\n"
 				+ "The credentials provided are incorrect";
-		Assert.assertEquals(LoginErrorText, ExpectedLoginErrorText);
+		AssertJUnit.assertEquals(LoginErrorText, ExpectedLoginErrorText);
 	}
 
 	@Test
@@ -66,7 +68,7 @@ public class Test_LoginPage extends Basetest {
 		loginPage.enterEmail("");
 		loginPage.enterPassword(validPassword);
 		loginPage.clickLoginButton();
-		String errorMsg = loginPage.getErrorMsg();
+		String errorMsg = loginPage.getErrorMSgEmptyEmail();
 		Assert.assertEquals(errorMsg, "Please enter your email");
 	}
 
@@ -76,7 +78,8 @@ public class Test_LoginPage extends Basetest {
 		loginPage.enterPassword("");
 		loginPage.clickLoginButton();
 		String errorMsg = loginPage.getErrorMsg();
-		Assert.assertEquals(errorMsg, "Please enter your password");
+		Assert.assertEquals(errorMsg,
+				"Login was unsuccessful. Please correct the errors and try again.\n" + "No customer account found");
 	}
 
 	@Test

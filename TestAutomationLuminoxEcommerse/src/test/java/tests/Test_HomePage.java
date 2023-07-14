@@ -1,5 +1,7 @@
 package tests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -31,16 +33,16 @@ public class Test_HomePage extends Basetest {
 	@Test
 	public void verifyLogo() {
 		HomePage homePage = new HomePage(driver);
-		Assert.assertTrue(homePage.isLogoDisplayed());
+		AssertJUnit.assertTrue(homePage.isLogoDisplayed());
 		homePage.clickLogo();
-		Assert.assertEquals(driver.getCurrentUrl(), "https://www.luminoex.com/");
+		AssertJUnit.assertEquals(driver.getCurrentUrl(), "https://www.luminoex.com/");
 	}
 
 	@Test
 	public void verifySearchFunctionality() {
 		HomePage homePage = new HomePage(driver);
 		homePage.performSearch("laptop");
-		Assert.assertTrue(driver.getCurrentUrl().contains("search?q=laptop"));
+		AssertJUnit.assertTrue(driver.getCurrentUrl().contains("search?q=laptop"));
 	}
 
 }

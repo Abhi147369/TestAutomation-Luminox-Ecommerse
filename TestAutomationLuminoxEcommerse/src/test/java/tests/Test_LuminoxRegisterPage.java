@@ -1,5 +1,7 @@
 package tests;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -24,7 +26,7 @@ public class Test_LuminoxRegisterPage extends Basetest {
         lr.clickRegisterButton();
 
         boolean isRegistrationSuccessful = lr.isRegistrationSuccessful();
-        Assert.assertTrue(isRegistrationSuccessful);
+        AssertJUnit.assertTrue(isRegistrationSuccessful);
     }
 
     @Test
@@ -40,7 +42,7 @@ public class Test_LuminoxRegisterPage extends Basetest {
         lr.clickRegisterButton();
 
         String nameRequiredErrorMessage = lr.getNameRequiredErrorMessage();
-        Assert.assertEquals(nameRequiredErrorMessage, "First name is required.", "Incorrect name required error message");
+        AssertJUnit.assertEquals(nameRequiredErrorMessage, "First name is required.", "Incorrect name required error message");
     }
 
     @Test
@@ -56,7 +58,7 @@ public class Test_LuminoxRegisterPage extends Basetest {
         lr.clickRegisterButton();
 
         String lastNameRequiredErrorMessage = lr.getLastNameRequiredErrorMessage();
-        Assert.assertEquals(lastNameRequiredErrorMessage, "Last name is required.", "Incorrect last name required error message");
+        AssertJUnit.assertEquals(lastNameRequiredErrorMessage, "Last name is required.", "Incorrect last name required error message");
     }
 
     @Test
@@ -73,7 +75,7 @@ public class Test_LuminoxRegisterPage extends Basetest {
         lr.clickRegisterButton();
 
         String invalidEmailErrorMessage = lr.getInvalidEmailErrorMessage();
-        Assert.assertEquals(invalidEmailErrorMessage, "Wrong email", "Incorrect invalid email error message");
+        AssertJUnit.assertEquals(invalidEmailErrorMessage, "Wrong email", "Incorrect invalid email error message");
     }
 
     @Test
@@ -90,6 +92,6 @@ public class Test_LuminoxRegisterPage extends Basetest {
         lr.clickRegisterButton();
 
         String mismatchedPasswordsErrorMessage = lr.getMismatchedPasswordsErrorMessage();
-        Assert.assertEquals(mismatchedPasswordsErrorMessage, "The password and confirmation password do not match.", "Incorrect mismatched passwords error message");
+        AssertJUnit.assertEquals(mismatchedPasswordsErrorMessage, "The password and confirmation password do not match.", "Incorrect mismatched passwords error message");
     }
 }

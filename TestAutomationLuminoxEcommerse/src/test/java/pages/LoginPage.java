@@ -20,6 +20,7 @@ public class LoginPage {
 	private By input_password_id = By.id("Password");
 	private By button_login_xpath = By.xpath("//input[@class ='button-1 login-button']");
 	private By errorMsg_xpath = By.xpath("//div[@class='message-error validation-summary-errors']");
+	private By emptyEmail_xpath= By.xpath("//span[@id='Email-error']");
 	private By click_forgot_pass_xpath = By.xpath("//a[normalize-space()='Forgot password?']");
 
 	// Methods
@@ -44,6 +45,12 @@ public class LoginPage {
 	public String getErrorMsg() {
 		String LoginErrorText = driver.findElement(errorMsg_xpath).getText();
 		return LoginErrorText;
+	}
+	
+	public String getErrorMSgEmptyEmail() {
+		String EmptyEmailErrorText = driver.findElement(emptyEmail_xpath).getText();
+		return EmptyEmailErrorText;
+		
 	}
 
 	public String getErrorMsgBothOrEmailWrong() {

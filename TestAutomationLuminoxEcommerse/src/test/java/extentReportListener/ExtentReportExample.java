@@ -1,19 +1,20 @@
 package extentReportListener;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 public class ExtentReportExample {
     private ExtentReports extent;
     private ExtentTest test;
 
-    @BeforeMethod
+	@BeforeMethod
     public void setUp() {
         // Initialize the extent report
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter("extent-report.html");
@@ -33,7 +34,7 @@ public class ExtentReportExample {
         test.log(Status.FAIL, "Test step 3 failed");
     }
 
-    @AfterMethod
+	@AfterMethod
     public void tearDown(ITestResult result) {
         // Log the test result
         if (result.getStatus() == ITestResult.FAILURE) {
